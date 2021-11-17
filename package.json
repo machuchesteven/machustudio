@@ -2,6 +2,7 @@
   "name": "machustudio",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8000",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
@@ -29,7 +30,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build/"
+    "deploy": "gh-pages -b main -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -52,5 +53,5 @@
   "devDependencies": {
     "gh-pages": "^3.2.3"
   },
-  "homepage": "http://machuchesteven.github.io/machustudio",
+  "homepage": "http://machuchesteven.github.io/machustudio"
 }
