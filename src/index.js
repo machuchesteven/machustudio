@@ -24,7 +24,7 @@ const Card = ({ isDragging, text }) => {
     []
   )
   return (
-    <div ref={dragRef} style={{ opacity }}>
+    <div ref={dragRef} style={{ opacity }} className="my-2">
       <Button variant={variant} >
         {text}
       </Button>
@@ -91,14 +91,14 @@ const Cards = () => {
   }
   return <div>
     <Container>
-      <Row>
+      <Row className="my-5">
         <Col md={8} sm className="m-auto">
           <Form.Control type="text" placeholder="Enter What You Need In A New Card" onChange={e => setNewText(e.target.value)} value={newText} />
         </Col>
         <Col md={4} sm className="m-auto">
           <Button variant="outline-primary" onClick={e => addTextToCard(e)}>Add Draggable Card</Button>
         </Col>
-        {cardTexts ? cardTexts.map((text, key) => <Row>
+        {cardTexts ? cardTexts.map((text, key) => <Row >
           <Card className="m-2 w-100" key={key} text={text} />
         </Row>
         ) : <Card text="Draggable Text" />}
