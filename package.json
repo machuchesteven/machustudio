@@ -2,7 +2,6 @@
   "name": "machustudio",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8000",
   "dependencies": {
     "@chakra-ui/react": "^2.2.4",
     "@emotion/react": "^11.9.3",
@@ -18,9 +17,9 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
     "framer-motion": "^6.5.1",
+    "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
-    "react-devicon": "^0.1.9",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18.2.0",

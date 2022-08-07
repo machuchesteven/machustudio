@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Container, Button, Row, Col, Form } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { useDrag, DndProvider, useDrop } from 'react-dnd'
-import ReactDOM from 'react-dom'
-import { HTML5Backend } from 'react-dnd-html5-backend'
-
+import { useDrag, DndProvider, useDrop } from 'react-dnd';
+import ReactDOM from 'react-dom';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import DevIcon from './components/DevIcon';
 // const ItemTypes = {
 //   'CARD': "Card"
 // }
@@ -55,10 +55,11 @@ const DroppedTo = () => {
       setDropped(dropObjects)
       console.log(dropped)
       let times = timesDropped + 1
-      setTimesDropped(timesDropped)
+      setTimesDropped(times)
     }
   }))
   function clearDropped() {
+    console.log(collectedProps)
     setDropped(null)
   }
   return <div>
@@ -75,6 +76,9 @@ const DroppedTo = () => {
         <Col md={6} className="p-5">
           <h3 className="text-center">Don't Drop Anything Here, It wont work</h3>
           {dropped ? dropped.map((item, key) => <li key={key} className="p-2 alert alert-info" onClick={e => clearDropped()}>{item} {dropped.length}</li>) : "Nothing Dropped So Far"}
+        </Col>
+        <Col md={12} className="p-5">
+          <h3 className="text-center">Times Dropped: {timesDropped}</h3>
         </Col>
       </Row>
     </Container>
@@ -120,6 +124,8 @@ ReactDOM.render(
         <DroppedTo className="mt-5" />
       </DndProvider>
     </Container>
+    <DevIcon name="arduino" />
+    <DevIcon name="python" />
   </div>,
   document.getElementById('root')
 )
