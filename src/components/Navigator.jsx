@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import React from 'react';
+import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 
 
 const Navigator = () => {
     return (
-        <Navbar expand="lg" bg="white" variant="white" fixed="top">
+        <Navbar expand="lg" bg="white" variant="white">
             <Container>
                 <Navbar.Brand>MachuStudio</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
+                    <Nav className="jsutify-content-space-btn">
                         <Nav.Link href="#home">Home</Nav.Link>
                         <Nav.Link href="#link">Designs</Nav.Link>
                         <Nav.Link href="#link">Newsletter</Nav.Link>
@@ -17,11 +16,14 @@ const Navigator = () => {
                     </Nav>
                 </Navbar.Collapse>
                 <Nav className='justify-content-end'>
-                    <Button variant="dark" size="md" className="m-auto">Hire Us</Button>
+                    <Button variant="dark" size="md" className="m-auto text-white">Hire Us</Button>
                 </Nav>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
             </Container>
 
         </Navbar>
     )
-
 }
+
+
+export default Navigator;

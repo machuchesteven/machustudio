@@ -4,12 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useDrag, DndProvider, useDrop } from 'react-dnd';
 import ReactDOM from 'react-dom';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import DevIcon from './components/DevIcon';
+// import DevIcon from './components/DevIcon';
 // const ItemTypes = {
 //   'CARD': "Card"
 // }
 
-
+import Navigator from './components/Navigator'
+import Fold from './components/Fold'
+import Designs from './components/Designs'
 
 const Card = ({ isDragging, text }) => {
   const [{ opacity, variant }, dragRef] = useDrag(
@@ -117,6 +119,11 @@ const Cards = () => {
 ReactDOM.render(
   <div>
     <Container>
+      <Navigator />
+      <Fold />
+      <Designs />
+    </Container>
+    <Container>
       <DndProvider backend={HTML5Backend}>
         <App />
         <hr />
@@ -124,8 +131,7 @@ ReactDOM.render(
         <DroppedTo className="mt-5" />
       </DndProvider>
     </Container>
-    <DevIcon name="arduino" />
-    <DevIcon name="python" />
+
   </div>,
   document.getElementById('root')
 )
