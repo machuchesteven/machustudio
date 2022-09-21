@@ -1,12 +1,12 @@
 .devicon-container {
     max-height: 100px;
     max-width: 100px;
-    margin: 0 auto;
+    margin: 2 2;
     overflow: hidden;
 }
 
 .devicon {
-    height: calc(inherit - 50%);
-    width: calc(inherit - 50%);
+    height: calc(inherit - 80%);
+    width: calc(inherit - 80%);
     margin: auto;
 }

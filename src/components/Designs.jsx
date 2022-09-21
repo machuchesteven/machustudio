@@ -1,42 +1,44 @@
 import React from 'react'
-import { Container, Row, Col, Button, Placeholder } from 'react-bootstrap'
 
+
+import {  Box, Text, Heading, Grid, GridItem } from '@chakra-ui/react'
+import { Container } from 'react-bootstrap'
+
+
+const values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
 const Designs = () => {
-    return (
-        <Container fluid bg="light">
-            <Row classname="mt-2 justify-content-center align-items-center">
-                <h2>Our Designs And Works</h2>
-                <p>Starting from web design, Logo & Brand design, Products design, games and algorithm challenges, These are our latest works</p>
-            </Row>
-            <Row gap={2}>
-                <Col sm={12} md={6}>
-                    <Row>
-                        <Col sm={6}>
-                            <Placeholder style={{ height: '200px' }} />
-                            <Placeholder size='md' className="mt-5" />
-                            <Placeholder size='md' className="mt-5" />
-                            <Placeholder size='md' className="mt-5" />
-
-                        </Col>
-                        <Col sm={6}>
-                            <Placeholder style={{ height: '200px' }} />
-                            <Placeholder size='md' className="mt-5" style />
-                            <Placeholder size='md' className="mt-5" />
-                            <Placeholder size='md' className="mt-5" />
-                            <Placeholder.Button variant="dark" />
-                        </Col>
-                    </Row>
-                </Col>
-                <Col sm={12} md={6}>
-                    <h2>Here Goes The Image for the large work to be displayed</h2>
-                </Col>
-                <Row>
-                    <Button className="m-auto" variant="dark">See More Design Works</Button>
-                </Row>
-            </Row>
+    return <>
+        <Container bg={'#00ffffff'} backGroundOpacity={10} maxW={'container.md'} style={{backGroundOpacity: 0.3}}>
+            <Heading m={5} >
+                Some Design Works
+            </Heading>
+            <Container>
+                <Text>
+                    Designs and etc
+                </Text>
+            </Container>
+            <Grid
+                templateColumns='repeat(3, 1fr)' gap={1}
+                templateRows='repeat(2, 1fr)'
+                h='300px'
+            >
+                <GridItem rowSpan={2} bg='papayawhip' colSpan={2} />
+                <GridItem rowSpan={() => 1} bg='papayawhip' colSpan={1} />
+                <GridItem rowSpan={() => 2} bg='papayawhip' colspan={1} />
+            </Grid>
+            <Grid mt={2}
+                templateColumns='repeat(2, 1fr)' gap={1}
+                templateRows='repeat(2, 1fr)'
+                h='300px'
+            >
+                <GridItem rowSpan={1} bg='papayawhip' colSpan={1} />
+                <GridItem rowSpan={() => 1} bg='papayawhip' colSpan={1} />
+                <GridItem rowSpan={() => 2} bg='papayawhip' colspan={2} />
+            </Grid>
         </Container>
-    )
+    </>
 }
+
 
 export default Designs;

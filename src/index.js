@@ -8,11 +8,21 @@ import Navigator from './components/Navigator'
 import Fold from './components/Fold'
 import Footer from './components/Footer'
 import Designs from './components/Designs'
-import DevIcon from './components/DevIcon'
+import SkillCard from './components/SkillCard'
+import Newsletter from './components/Newsletter'
+
+import { ChakraProvider } from '@chakra-ui/react'
+import Services from './components/Services';
+
 
 ReactDOM.render(<div>
-    <Navigator />
-    <Fold />
-    <DevIcon name="python" size='md' />
-    <Footer />
+    <ChakraProvider>
+        <Navigator />
+        <Fold />
+        <Designs />
+        <SkillCard name="python" projects={25} iconName="python" />
+        <Services />
+        <Newsletter />
+        <Footer />
+    </ChakraProvider>
 </div>, document.getElementById('root'));
