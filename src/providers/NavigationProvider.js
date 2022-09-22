@@ -1,6 +1,6 @@
 import React, { createContext, useState, Component } from 'react'
 
-export const NavigationContenxt = createContext()
+export const NavigationContext = createContext()
 
 
 export default class NavigationProvider extends Component {
