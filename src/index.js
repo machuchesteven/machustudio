@@ -4,6 +4,18 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 import ReactDOM from 'react-dom';
 
+import { BrowserRouter as Router, Routes, Route, Link, } from "react-router-dom";
+
+
+// pages import
+import ThreeDPage from './pages/ThreeDPage';
+import BrandingPage from './pages/BrandingPage';
+import ProjectPage from './pages/ProjectPage';
+import SoftwaresPage from './pages/SoftwaresPage';
+import HirePage from './pages/HirePage';
+
+
+// components import
 import Navigator from './components/Navigator'
 import Fold from './components/Fold'
 import Footer from './components/Footer'
@@ -15,8 +27,8 @@ import { ChakraProvider } from '@chakra-ui/react'
 import Services from './components/Services';
 
 
-ReactDOM.render(<div>
-    <ChakraProvider>
+const HomePage = () => {
+    return <ChakraProvider>
         <Navigator />
         <Fold />
         <Designs />
@@ -24,5 +36,12 @@ ReactDOM.render(<div>
         <Services />
         <Newsletter />
         <Footer />
+    </ChakraProvider>
+}
+
+ReactDOM.render(<div>
+    <ChakraProvider>
+        <Navigator />
+        <ThreeDPage />
     </ChakraProvider>
 </div>, document.getElementById('root'));
