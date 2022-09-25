@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Heading, Text, SimpleGrid, UnorderedList, ListItem, Center } from '@chakra-ui/react'
+import { Box, Heading, Text, SimpleGrid, UnorderedList, ListItem, Center, ChakraProvider } from '@chakra-ui/react'
 import { Container } from 'react-bootstrap'
 import { MdEmail } from 'react-icons/md'
 
@@ -8,12 +8,13 @@ import { MdEmail } from 'react-icons/md'
 const Services = () => {
     return (<>
         <Container className="mt-md-5 mt-2">
+            <ChakraProvider>
             <Box>
                 <Heading className="text-center" size={['lg', null, '2xl']}>Our Services and Products</Heading>
             </Box>
-            <SimpleGrid columns={{ sm: 2, md: 3 }} spacingX={1} mt={5}>
+            <SimpleGrid columns={{ sm: 3, md: 3 }} spacingX={1} mt={5}>
                 <Box mb={[2, null, null]}>
-                    <Heading size='md' ml={[5, null, null]} className="text-md-center">Branding</Heading>
+                    <Heading size='lg' ml={[5, null, null]} className="text-md-center">Branding</Heading>
                     <Box mt={[2, null, 5]} pl={2} justify={'center'}>
                         <UnorderedList listStyleType={'none'} justifyContent='center' alignItems='center' jsutifyItems='center'>
                             <ListItem m={1} className="text-md-center">Logo Design</ListItem>
@@ -46,6 +47,7 @@ const Services = () => {
                     </Box>
                 </Box>
             </SimpleGrid>
+            </ChakraProvider>
         </Container>
     </>)
 }

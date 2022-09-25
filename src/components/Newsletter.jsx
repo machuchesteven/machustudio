@@ -1,11 +1,13 @@
 import React from 'react'
-import { Text, Box, Heading, Button, FormControl, FormLabel, InputGroup, InputLeftElement, Input, Stack, Center } from '@chakra-ui/react'
+import { Alert, Text, Box, Heading, Button, FormControl, FormLabel, InputGroup, InputLeftElement, Input, Stack, Center, ChakraProvider } from '@chakra-ui/react'
 import { Container } from 'react-bootstrap'
 
 import { MdOutlineEmail } from 'react-icons/md'
 
 const Newsletter = () => {
     return <Container>
+        <ChakraProvider>
+        
         <Box>
             <Box>
                 <Heading as="h1" fontSize="2xl" className="text-center" mb={[2, null, 4]}>
@@ -39,7 +41,9 @@ const Newsletter = () => {
                 </FormControl>
             </Box>
         </Box>
+        </ChakraProvider>
     </Container>
+    
 }
 
 

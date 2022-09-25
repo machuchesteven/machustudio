@@ -9,7 +9,8 @@ import {
     Tag,
     useColorModeValue,
     Center,
-    IconButton
+    IconButton,
+    ChakraProvider
 } from '@chakra-ui/react';
 
 
@@ -41,48 +42,50 @@ const Logo = (props) => {
 
 const Footer = () => {
     return (
-        <Box mt={5} pt={[2, 0, 5]} bgColor="grey.400">
+        <ChakraProvider>
+            <Box mt={5} pt={[2, 0, 5]} bgColor="grey.400">
 
-            <Flex
-                align={'center'}
-                _before={{
-                    content: '""',
-                    borderBottom: '1px solid',
-                    borderColor: useColorModeValue('gray.200', 'gray.700'),
-                    flexGrow: 1,
-                    mr: 8,
-                }}
-                _after={{
-                    content: '""',
-                    borderBottom: '1px solid',
-                    borderColor: useColorModeValue('gray.200', 'gray.700'),
-                    flexGrow: 1,
-                    ml: 8,
-                }}>
-                <Logo />
-            </Flex>
+                <Flex
+                    align={'center'}
+                    _before={{
+                        content: '""',
+                        borderBottom: '1px solid',
+                        borderColor: useColorModeValue('gray.200', 'gray.700'),
+                        flexGrow: 1,
+                        mr: 8,
+                    }}
+                    _after={{
+                        content: '""',
+                        borderBottom: '1px solid',
+                        borderColor: useColorModeValue('gray.200', 'gray.700'),
+                        flexGrow: 1,
+                        ml: 8,
+                    }}>
+                    <Logo />
+                </Flex>
 
-            <Box>
-                <Container>
-                    <Box
-                        as={Stack}
-                        maxW={'container.md'}
-                        py={4}
-                        direction={{ base: 'column', md: 'row' }}
-                        spacing={4}
-                        justify={{ base: 'center', md: 'space-between' }}
-                        align={{ base: 'center', md: 'center' }}>
-                        <Text>©2022 MachuStudio . All rights reserved</Text>
-                        <Stack direction={'row'} justify={{ base: 'space-between' }} spacing={{base: 6, md: 10}} ml={[null, 0, 4]}align={'flex-end'} >
-                            <IconButton size={'lg'} fontSize={'3xl'} _hover={{background: 'blue.100'}}  icon={<BsInstagram />} />
-                            <IconButton size={'lg'} fontSize={'3xl'} _hover={{background: 'blue.100'}} icon={<BsLinkedin />} />
-                            <IconButton size={'lg'} fontSize={'3xl'} _hover={{background: 'blue.100'}} icon={<BsGithub />} />
-                            <IconButton size={'lg'} fontSize={'3xl'} _hover={{background: 'blue.100'}} icon={<BsDribbble />} />
-                        </Stack>
-                    </Box>
-                </Container>
+                <Box>
+                    <Container>
+                        <Box
+                            as={Stack}
+                            maxW={'container.md'}
+                            py={4}
+                            direction={{ base: 'column', md: 'row' }}
+                            spacing={4}
+                            justify={{ base: 'center', md: 'space-between' }}
+                            align={{ base: 'center', md: 'center' }}>
+                            <Text>©2022 MachuStudio . All rights reserved</Text>
+                            <Stack direction={'row'} justify={{ base: 'space-between' }} spacing={{ base: 6, md: 10 }} ml={[null, 0, 4]} align={'flex-end'} >
+                                <IconButton size={'lg'} fontSize={'3xl'} _hover={{ background: 'blue.100' }} icon={<BsInstagram />} />
+                                <IconButton size={'lg'} fontSize={'3xl'} _hover={{ background: 'blue.100' }} icon={<BsLinkedin />} />
+                                <IconButton size={'lg'} fontSize={'3xl'} _hover={{ background: 'blue.100' }} icon={<BsGithub />} />
+                                <IconButton size={'lg'} fontSize={'3xl'} _hover={{ background: 'blue.100' }} icon={<BsDribbble />} />
+                            </Stack>
+                        </Box>
+                    </Container>
+                </Box>
             </Box>
-        </Box>
+        </ChakraProvider>
     )
 }
 

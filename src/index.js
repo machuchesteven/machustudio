@@ -25,7 +25,7 @@ import Newsletter from './components/Newsletter'
 
 import { ChakraProvider } from '@chakra-ui/react'
 import Services from './components/Services';
-
+import PortfolioPage from './pages/PortfolioPage';
 
 const HomePage = () => {
     return <ChakraProvider>
@@ -40,8 +40,11 @@ const HomePage = () => {
 }
 
 ReactDOM.render(<div>
-    <ChakraProvider>
-        <Navigator />
-        <ThreeDPage />
-    </ChakraProvider>
+        <Fold />
+        <Designs />
+        <Services />
+        <Newsletter />
+        <Footer />
+
 </div>, document.getElementById('root'));
+

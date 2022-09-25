@@ -1,22 +1,50 @@
-import React from 'react'
-import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Button, Flex } from '@chakra-ui/react'
-
-const Navigator = () => {
-    return <Container fluid >
-        <Navbar navBarScroll bg="light" expand="md" variant="dark" className="p-md-2" >
-            <Navbar.Brand className='display-sm-none'>MachuStudio</Navbar.Brand>
-            <Nav navBarScroll >
-                <Flex>
-                <Nav.Item><Button m={[1, null, 2]}>Branding</Button></Nav.Item>
-                <Nav.Item><Button m={[1, null, 2]}>3D</Button></Nav.Item>
-                <Nav.Item><Button m={[1, null, 2]}>Softwares</Button></Nav.Item>
+import {
+    Box,
+    Button,
+    ButtonGroup,
+    Container,
+    Flex,
+    HStack,
+    IconButton,
+    useBreakpointValue,
+    useColorModeValue,
+  } from '@chakra-ui/react'
+  import * as React from 'react'
+  import { FiMenu } from 'react-icons/fi'
+  const Logo = require('../logo.svg')
+  
+  const Navigator = () => {
+    const isDesktop = useBreakpointValue({ base: false, lg: true })
+    return (<Box as="section" pb={{ base: '12', md: '24' }}>
+        <Box as="nav" bg="bg-surface" boxShadow={useColorModeValue('sm', 'sm-dark')}>
+          <Container py={{ base: '4', lg: '5' }}>
+            <HStack spacing="10" justify="space-between">
+              <Logo />
+              {isDesktop ? (
+                <Flex justify="space-between" flex="1">
+                  <ButtonGroup variant="link" spacing="8">
+                    {['Product', 'Pricing', 'Resources', 'Support'].map((item) => (
+                      <Button key={item}>{item}</Button>
+                    ))}
+                  </ButtonGroup>
+                  <HStack spacing="3">
+                    <Button variant="ghost">Sign in</Button>
+                    <Button variant="primary">Sign up</Button>
+                  </HStack>
                 </Flex>
-            </Nav>
-        </Navbar>
-
-    </Container>
-}
+              ) : (
+                <IconButton
+                  variant="ghost"
+                  icon={<FiMenu fontSize="1.25rem" />}
+                  aria-label="Open Menu"
+                />
+              )}
+            </HStack>
+          </Container>
+        </Box>
+      </Box>
+    )
+  }
 
 
 export default Navigator;
