@@ -1,50 +1,59 @@
-import {
-    Box,
-    Button,
-    ButtonGroup,
-    Container,
-    Flex,
-    HStack,
-    IconButton,
-    useBreakpointValue,
-    useColorModeValue,
-  } from '@chakra-ui/react'
-  import * as React from 'react'
-  import { FiMenu } from 'react-icons/fi'
-  const Logo = require('../logo.svg')
-  
-  const Navigator = () => {
-    const isDesktop = useBreakpointValue({ base: false, lg: true })
-    return (<Box as="section" pb={{ base: '12', md: '24' }}>
-        <Box as="nav" bg="bg-surface" boxShadow={useColorModeValue('sm', 'sm-dark')}>
-          <Container py={{ base: '4', lg: '5' }}>
-            <HStack spacing="10" justify="space-between">
-              <Logo />
-              {isDesktop ? (
-                <Flex justify="space-between" flex="1">
-                  <ButtonGroup variant="link" spacing="8">
-                    {['Product', 'Pricing', 'Resources', 'Support'].map((item) => (
-                      <Button key={item}>{item}</Button>
-                    ))}
-                  </ButtonGroup>
-                  <HStack spacing="3">
-                    <Button variant="ghost">Sign in</Button>
-                    <Button variant="primary">Sign up</Button>
-                  </HStack>
-                </Flex>
-              ) : (
-                <IconButton
-                  variant="ghost"
-                  icon={<FiMenu fontSize="1.25rem" />}
-                  aria-label="Open Menu"
-                />
-              )}
-            </HStack>
-          </Container>
-        </Box>
-      </Box>
-    )
-  }
+import React from 'react'
+import { chakra, Text, HStack, VStack, Flex, Button, ChakraProvider, useDisclosure, Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerCloseButton, DrawerOverlay, DrawerContent, IconButton } from '@chakra-ui/react'
+import { HiOutlineMenuAlt4 } from 'react-icons/hi'
+import { Link } from 'react-router-dom'
+import { Container } from 'react-bootstrap'
 
+const MobileDrawer = ({ p = 15,
+  placement = "right",
+  width,
+  isOpen,
+  children,
+  onClose,
+  btnRef,
+  title = "Menu",
+  footer, }) => {
+  return (<Container>
+    <Flex w={width}>
+      <Button>
+        <IconButton icon={HiOutlineMenuAlt4} />
+      </Button>
+      <Drawer isOpen={isOpen}
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <VStack alignItems={'left'}>
+          <Button variant='text'>2D</Button>
+          <Button variant='text'>3D</Button>
+          <Button variant='text'>Softwares</Button>
+        </VStack>
+      </Drawer>
+    </Flex>
+  </Container>
+  )
+}
+
+
+
+const Navigator = () => {
+  return (<ChakraProvider>
+    <chakra.header id='header' >
+      <Container>
+      <Flex w={'100%'} px={6} py={5} align={'center'} justify={'space-between'}>
+        <Text ml={5} as="b">MStudio</Text>
+        <HStack as="nav" spacing={5}>
+          <Button as={Link} to="2d" variant="nav">2D</Button>
+          <Button as={Link} to="3d" variant="nav">3D</Button>
+          <Button as={Link} to="softwares" variant="nav">Software</Button>
+        </HStack>
+        <HStack>
+          <Button>Contact Us</Button>
+        </HStack>
+      </Flex>
+      </Container>
+    </chakra.header>
+  </ChakraProvider>)
+}
 
 export default Navigator;

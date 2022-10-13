@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap'
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react'
 
 
-const HirePage = () => {
+const ContactUsPage = () => {
     return <Container>
         <Box>
             <Breadcrumb>
@@ -18,4 +18,4 @@ const HirePage = () => {
     </Container>
 }
 
-export default HirePage;
+export default ContactUsPage;

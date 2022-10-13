@@ -25,7 +25,7 @@ const Services = () => {
                     </Box>
                 </Box>
                 <Box mb={[2, null, null]} >
-                    <Heading size='md' ml={[5, null, null]} className="text-md-center" pl={2}>3D</Heading>
+                    <Heading size='lg' ml={[5, null, null]} className="text-md-center" pl={2}>3D</Heading>
                     <Box mt={[2, null, 5]} pl={2} >
                         <UnorderedList listStyleType={'none'} className='justify-content-center'>
                             <ListItem className="text-md-center" m={1}>Products Design</ListItem>
@@ -36,7 +36,7 @@ const Services = () => {
                     </Box>
                 </Box>
                 <Box mb={[2, null, null]}>
-                    <Heading size='md' ml={[5, null, null]} className="text-md-center">Softwares</Heading>
+                    <Heading size='lg' ml={[5, null, null]} className="text-md-center">Softwares</Heading>
                     <Box mt={[2, null, 5]} pl={2} pb={[2, null, 5]} centerContent>
                         <UnorderedList listStyleType={'none'} >
                             <ListItem className="text-md-center" m={1}>UI/UX</ListItem>
