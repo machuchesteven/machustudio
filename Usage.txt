@@ -1,0 +1,14 @@
+base colors:
+    Blue:
+    Golden:
+
+
+    Gradients: 
+        Blue Gradient: #2008c4 #1e04a0
+        Golden Gradient: #e3b305 #b78c04 #b27e18 
+
+    White color:
+        mosmorphism:
+        Dark mosmorphism:
+
+    Events:

@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap'
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react'
 
 
-const BrandingPage = () => {
+const DesignPage = () => {
     return <Container>
         <Box>
             <Breadcrumb>
@@ -21,4 +21,4 @@ const BrandingPage = () => {
     </Container>
 }
 
-export default BrandingPage;
+export default DesignPage;
