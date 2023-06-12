@@ -1,4 +1,4 @@
-import { Heading } from '@chakra-ui/react';
+import { Heading,Text} from '@chakra-ui/react';
 import React from 'react'
 import { Container } from 'react-bootstrap';
 
@@ -7,11 +7,11 @@ const ExperiencesPage = () => {
     return <div>
         <Container>
             <Heading textAlign={'center'} my={10}>
-                Games, AR and VR: The experiences we make
+                Games, AR and VR!<br />The world changing experiences we make
             </Heading>
+            <Text textAlign={'center'}>We are bringing the world's wonder to your space <br /> Using technology and Creativity</Text>
         </Container>
     </div>
 }
-
 
 export default ExperiencesPage;

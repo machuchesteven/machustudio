@@ -7,7 +7,7 @@ import { GrInstagram, GrTwitter, GrGithub } from 'react-icons/gr'
 import { MdOutlineMailOutline } from 'react-icons/md'
 const Footer = () => {
     return <>
-        <Box mt={5}>
+        <Box mt={5} zIndex={2}>
             <Container>
                 <Center >
                     <VStack mb={[2, null, 5]}>
@@ -25,15 +25,21 @@ const Footer = () => {
                         <Heading fontSize={'lg'}>
                             Useful Links
                         </Heading>
-                        <VStack alignItems="left">
+                        <VStack alignItems="left" spacingy={0}>
                             <Link to='/design'>
-                                <Button variant="nav" colorScheme='white'>Design</Button>
+                                <Button variant="nav" my={1} p={0}>Design</Button>
                             </Link>
                             <Link to='/software'>
-                                <Button variant="nav" >Software</Button>
+                                <Button variant="nav" p={0} my={0}>Software</Button>
                             </Link>
-                            <Link to='/experiences'>
-                                <Button variant="nav">Experiences</Button>
+                            <Link to='/experiences/games'>
+                                <Button variant="nav" p={0} my={0}>Games</Button>
+                            </Link>
+                            <Link to='/experiences/mobile-apps'>
+                                <Button variant="nav" p={0} my={0}>Mobile Apps</Button>
+                            </Link>
+                            <Link to='/experiences/ar-vr'>
+                                <Button variant="nav" p={0} my={0}>AR-VR zone</Button>
                             </Link>
                         </VStack>
                     </Box>
@@ -58,9 +64,16 @@ const Footer = () => {
                             </Button>
                         </HStack>
                         <Text my={2} textAlign={'center'}><i>#machustudio</i></Text>
+                        <Tag m={1}>Animation</Tag><Tag m={1}>VFX</Tag><Tag m={1}>3D</Tag>
+                        <Tag m={1}>Branding</Tag><Tag m={1}>2D</Tag><Tag m={1}>UI/UX</Tag>
+                        <Tag m={1}>GameDev</Tag><Tag m={1}>AR-VR</Tag><Tag m={1}>MobileApp</Tag>
+                        <Tag m={1}>Web</Tag>
                     </Box>
                 </SimpleGrid>
             </Container>
+            <Box p={3} bg={"#0D1117"} w={'100hw'}>
+                <Text textAlign={'center'}>Copyright &copy; 2023 MachuStudio. All rights reserved</Text>
+            </Box>
         </Box>
     </>
 }

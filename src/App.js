@@ -1,16 +1,18 @@
-import { Box, Heading, Center, Text, VStack, Image, Button, HStack, Stack, SimpleGrid } from "@chakra-ui/react"
+import { Box, Heading, Center, Text, VStack, Image, Button, Stack, SimpleGrid } from "@chakra-ui/react"
 import Navigator from './components/Navigator'
 import Footer from './components/Footer'
-import { Container, Nav } from "react-bootstrap"
+import { Container} from "react-bootstrap"
 import Newsletter from "./components/Newsletter"
 import Logo from './logo.svg'
 import { Routes, Route } from 'react-router-dom'
+
 import ComingSoon from './pages/ComingSoon'
 import SoftwaresPage from './pages/SoftwaresPage'
 import DesignPage from './pages/DesignPage'
 import ExperiencesPage from './pages/ExperiencesPage'
+import ErrorPage from "./pages/ErrorPage"
 
-
+import ParticlesBox from "./components/ParticlesBox"
 
 
 const Hero = () => {
@@ -20,7 +22,7 @@ const Hero = () => {
         <Center minH={'70vh'}>
           <VStack>
             <Heading textAlign={'center'}>MachuStudio: Your<br className="d-sm-block d-md-none" /> <Text as="span" bgGradient='linear(to-l, #2008c4, #1e04a0)' bgClip='text'>Design Studio</Text> for <br />Creating <Text as="span" bgGradient='linear(to-l, #e3b305,#b78c04, #b27e18)' bgClip='text'>Amazing<br className="d-sm-block d-md-none" /> Experiences!</Text></Heading>
-            <Text my={5} textAlign={'center'}>We Design and Egineer<br className="d-sm-block d-md-none" /> experiences that <br className="d-sm-block d-md-none" />engage, inspire, and delight</Text>
+            <Text my={5} textAlign={'center'}>We Design and Engineer<br className="d-sm-block d-md-none" /> experiences that <br className="d-sm-block d-md-none" />engage, inspire, and delight</Text>
             <Stack spacing={6} direction={'row'}>
               <Button
                 rounded={'md'}
@@ -135,6 +137,7 @@ function Homepage() {
       <Hero />
       <Services />
       <HowWeDo />
+      <ParticlesBox />
       <Samples />
       <LeaderNote />
       <Newsletter />
@@ -153,6 +156,7 @@ function App() {
       <Route path="/design" element={<DesignPage />} />
       <Route path="/software" element={<SoftwaresPage />} />
       <Route path="/experiences" element={<ExperiencesPage />} />
+      <Route path="/error-404" element={<ErrorPage/>} />
     </Routes>
     <Footer />
   </>
