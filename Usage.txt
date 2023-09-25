@@ -12,3 +12,11 @@ base colors:
         Dark mosmorphism:
 
     Events:
+
+
+rsync -avz ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/zellwk/zellwk.com/dist/
+
+nginx -T
+
+systemctl restart nginx
+systemctl status nginx 
