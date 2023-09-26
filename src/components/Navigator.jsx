@@ -59,7 +59,7 @@ function MobileDrawer() {
 
 export default function Navigator() {
   return (
-    <chakra.header id="header" className='container'>
+    <chakra.header id="header" className='container-lg'>
       <Flex
         w="100%"
         px="6"

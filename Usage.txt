@@ -13,6 +13,14 @@ base colors:
 
     Events:
 
+before pushing to github,
+
+it is required to add the sshkey to the ssh agent that is started and added as follows
+
+eval "$(ssh-agent -s)"
+
+ssh-add <path:to:key>
+
 
 run `npm run build`
 
@@ -27,3 +35,9 @@ systemctl restart nginx
 systemctl status nginx
 
 then
+
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/machustudio.com/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/machustudio.com/privkey.pem
+This certificate expires on 2023-12-25.
