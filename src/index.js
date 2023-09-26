@@ -1,8 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { ChakraProvider, Heading, Text, Button } from '@chakra-ui/react';
-import { Container } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { ChakraProvider } from '@chakra-ui/react';
+import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App'

@@ -14,9 +14,16 @@ base colors:
     Events:
 
 
-rsync -avz ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/zellwk/zellwk.com/dist/
+run `npm run build`
 
-nginx -T
+then push to server by 
+
+rsync -avz -e "ssh" build/ root@machustudio.com:/var/www/machustudio.com/
+
+ssh to server and run 
 
 systemctl restart nginx
-systemctl status nginx 
+
+systemctl status nginx
+
+then

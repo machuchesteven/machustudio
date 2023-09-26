@@ -5,7 +5,7 @@ import { GoCheck } from 'react-icons/go'
 import { Container } from 'react-bootstrap'
 export default function Newsletter() {
     const [email, setEmail] = useState('');
-    const states = ['initial', 'submitting', 'success']
+    // const states = ['initial', 'submitting', 'success']
     const [state, setState] = useState(
         'initial'
     );

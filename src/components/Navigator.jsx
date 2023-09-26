@@ -59,7 +59,7 @@ function MobileDrawer() {
 
 export default function Navigator() {
   return (
-    <chakra.header id="header">
+    <chakra.header id="header" className='container'>
       <Flex
         w="100%"
         px="6"
@@ -67,11 +67,11 @@ export default function Navigator() {
         align="center"
         justify="space-between"
       >
-        <HStack as={Link} to={'/machustudio'}>
+        <HStack as={Link} to={'/'}>
           <Image src={Logo} h="50px" /><Text fontSize="28px" as='b' display={{ base: "none", md: "flex" }}><Text as="span" bg="gradient"> Machu</Text>Studio</Text>
         </HStack>
-        <HStack as="nav" spacing="5" display={{ base: "none", md: "flex" }}>
-        <Link to='/design'>
+        <HStack as="nav" spacing={{ base: "2", lg: "5" }} display={{ base: "none", md: "flex" }}>
+          <Link to='/design'>
             <Button variant="nav">Design</Button>
           </Link>
           <Link to='/software'>
@@ -87,7 +87,6 @@ export default function Navigator() {
           </Button>
           <MobileDrawer />
         </HStack>
-
       </Flex>
     </chakra.header>
   );
