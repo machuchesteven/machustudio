@@ -1,56 +1,45 @@
-import React from 'react'
-import { Box, Heading, Text, SimpleGrid, UnorderedList, ListItem, Center, ChakraProvider } from '@chakra-ui/react'
-import { Container } from 'react-bootstrap'
-import { MdEmail } from 'react-icons/md'
-
-
+import { Heading, SimpleGrid, Box, Text } from "@chakra-ui/react"
 
 const Services = () => {
-    return (<>
-        <Container className="mt-md-5 mt-2">
-            <ChakraProvider>
-            <Box>
-                <Heading className="text-center" size={['lg', null, '2xl']}>Our Services and Products</Heading>
-            </Box>
-            <SimpleGrid columns={{ sm: 3, md: 3 }} spacingX={1} mt={5}>
-                <Box mb={[2, null, null]}>
-                    <Heading size='lg' ml={[5, null, null]} className="text-md-center">Branding</Heading>
-                    <Box mt={[2, null, 5]} pl={2} justify={'center'}>
-                        <UnorderedList listStyleType={'none'} justifyContent='center' alignItems='center' jsutifyItems='center'>
-                            <ListItem m={1} className="text-md-center">Logo Design</ListItem>
-                            <ListItem m={1} className="text-md-center">Cards Design</ListItem>
-                            <ListItem m={1} className="text-md-center">Posters</ListItem>
-                            <ListItem m={1} className="text-md-center">Printables</ListItem>
-                        </UnorderedList>
-                    </Box>
-                </Box>
-                <Box mb={[2, null, null]} >
-                    <Heading size='lg' ml={[5, null, null]} className="text-md-center" pl={2}>3D</Heading>
-                    <Box mt={[2, null, 5]} pl={2} >
-                        <UnorderedList listStyleType={'none'} className='justify-content-center'>
-                            <ListItem className="text-md-center" m={1}>Products Design</ListItem>
-                            <ListItem className="text-md-center" m={1}>Interior Designs</ListItem>
-                            <ListItem className="text-md-center" m={1}>3D ads Designs</ListItem>
-                            <ListItem className="text-md-center" m={1}>Animations</ListItem>
-                        </UnorderedList>
-                    </Box>
-                </Box>
-                <Box mb={[2, null, null]}>
-                    <Heading size='lg' ml={[5, null, null]} className="text-md-center">Softwares</Heading>
-                    <Box mt={[2, null, 5]} pl={2} pb={[2, null, 5]} centerContent>
-                        <UnorderedList listStyleType={'none'} >
-                            <ListItem className="text-md-center" m={1}>UI/UX</ListItem>
-                            <ListItem className="text-md-center" m={1}>Mobile Apps</ListItem>
-                            <ListItem className="text-md-center" m={1}>Website</ListItem>
-                            <ListItem className="text-md-center" m={1}>Automations</ListItem>
-                        </UnorderedList>
-                    </Box>
-                </Box>
-            </SimpleGrid>
-            </ChakraProvider>
-        </Container>
-    </>)
+  // our design services
+  return <>
+    <Heading textAlign={'center'}>Our Design Services</Heading>
+    <Text mb={2} textAlign={'center'}>We create memorable impressions<br className="d-md-none" /> using our designs services</Text>
+    <hr className="w-75 mx-auto" />
+    <Box className='container' mt={2}>
+      <SimpleGrid columns={{ base: 2, md: 3 }} gx={1}>
+        <Box borderWidth={1} borderColor={"gold"} rounded="sm" m={1}>
+          <Heading textAlign={'center'} my={5}>
+            Card One
+          </Heading>
+        </Box>
+        <Box borderWidth={1} borderColor={"gold"} rounded="sm" m={1}>
+          <Heading textAlign={'center'} my={5}>
+            Card Two
+          </Heading></Box>
+        <Box borderWidth={1} borderColor={"gold"} rounded="sm" m={1}>
+          <Heading textAlign={'center'} my={5}>
+            Card Three
+          </Heading>
+        </Box>
+        <Box borderWidth={1} borderColor={"gold"} rounded="sm" m={1}>
+          <Heading textAlign={'center'} my={5}>
+            Card Four
+          </Heading>
+        </Box>
+        <Box borderWidth={1} borderColor={"gold"} rounded="sm" m={1}>
+          <Heading textAlign={'center'} my={5}>
+            Card Five
+          </Heading>
+        </Box>
+        <Box borderWidth={1} borderColor={"gold"} rounded="sm" m={1}>
+          <Heading textAlign={'center'} my={5}>
+            Card Six
+          </Heading>
+        </Box>
+      </SimpleGrid >
+    </Box>
+  </>
 }
-
 
 export default Services;

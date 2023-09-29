@@ -59,30 +59,30 @@ function MobileDrawer() {
 
 export default function Navigator() {
   return (
-    <chakra.header id="header" className='container-lg'>
+    <chakra.header w={'full'} id="header" bg={'rgba(255, 255, 255, 0)'} position={{ base: null, md: 'fixed' }} >
       <Flex
-        w="100%"
         px="6"
-        py="5"
+        py="3"
         align="center"
         justify="space-between"
+        className='container-lg'
       >
         <HStack as={Link} to={'/'}>
-          <Image src={Logo} h="50px" /><Text fontSize="28px" as='b' display={{ base: "none", md: "flex" }}><Text as="span" bg="gradient"> Machu</Text>Studio</Text>
+          <Image src={Logo} h="40px" /><Text fontSize="28px" as='b' display={{ base: "none", md: "flex" }}><Text as="span" bg="gradient"> Machu</Text>Studio</Text>
         </HStack>
-        <HStack as="nav" spacing={{ base: "2", lg: "5" }} display={{ base: "none", md: "flex" }}>
+        <HStack as="nav" borderRadius={'xl'} bg={'rgba(255, 255, 255, 0.4)'} px={{ base: null, md: 10 }} spacing={{ base: "2", lg: "5" }} display={{ base: "none", md: "flex" }} backdropFilter={'blur(10px)'} >
           <Link to='/design'>
-            <Button variant="nav">Design</Button>
+            <Button variant="nav" color={'#8B6E58'}>Design</Button>
           </Link>
-          <Link to='/software'>
-            <Button variant="nav">Software</Button>
+          <Link to='/software' color={'#808080'}>
+            <Button variant="nav" >Software</Button>
           </Link>
-          <Link to='/experiences'>
+          <Link to='/experiences' color={'#6B8EAB'}>
             <Button variant="nav">Experiences</Button>
           </Link>
         </HStack>
         <HStack>
-          <Button borderColor={'#e3b305'} borderWidth={1} color={'#2008c4'}>
+          <Button borderColor={'#e3b305'} borderWidth={1} color={'#2008c4'} bg={"rgba(255, 255, 255, .4)"} backdropFilter="blur(3px)">
             Contact Us
           </Button>
           <MobileDrawer />

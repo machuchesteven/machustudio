@@ -20,7 +20,6 @@ const ProjectPage = () => {
                     </BreadcrumbItem>
                 </Breadcrumb>
             </Box>
-
         </Container>
     </ChakraProvider >
 }

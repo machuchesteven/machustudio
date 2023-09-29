@@ -71,8 +71,8 @@ const Footer = () => {
                     </Box>
                 </SimpleGrid>
             </Container>
-            <Box p={3} bg={"#0D1117"} w={'100hw'}>
-                <Text textAlign={'center'}>Copyright &copy; 2023 MachuStudio. All rights reserved</Text>
+            <Box p={5} bg={"rgba(13,17,23, 0.7)"} w={'100hw'} backdropFilter={'blur(15px)'}>
+                <Text textAlign={'center'} color={'white'}>Copyright &copy; 2023 MachuStudio. All rights reserved</Text>
             </Box>
         </Box>
     </>
