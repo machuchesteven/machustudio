@@ -43,7 +43,7 @@ function MobileDrawer() {
       >
         <VStack alignItems="left">
           <Link to='/design'>
-            <Button variant="nav">Design</Button>
+            <Button variant="nav">DESIGN</Button>
           </Link>
           <Link to='/software'>
             <Button variant="nav">Software</Button>

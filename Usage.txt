@@ -41,3 +41,7 @@ Successfully received certificate.
 Certificate is saved at: /etc/letsencrypt/live/machustudio.com/fullchain.pem
 Key is saved at:         /etc/letsencrypt/live/machustudio.com/privkey.pem
 This certificate expires on 2023-12-25.
+
+
+the ip address for the server is: 45.79.152.93
+

@@ -10,7 +10,7 @@ const Website = () => {
 
     return (
         <ChakraProvider>
-            <BrowserRouter>
+            <BrowserRouter basename='/'>
                 <App />
             </BrowserRouter>
         </ChakraProvider>
